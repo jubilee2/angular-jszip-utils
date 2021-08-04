@@ -1,9 +1,10 @@
 {
   "name": "angular-jszip-utils",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A starter project for a reusable AngularJS bower nodule. Gulp, karma, jshint & travis out of the box.",
   "repository": "https://github.com/jubilee2/angular-jszip-utils",
+  "main": "dist/angular-jszip-utils.js",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.14.8",

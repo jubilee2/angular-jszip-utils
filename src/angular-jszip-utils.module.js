@@ -2,7 +2,7 @@
 
 angular
   .module('angular-jszip-utils', [])
-  .value('version', '0.1')
+  .value('version', '0.1.0')
   .provider('JsZipUtils', function ChartJsProvider () {
     var ngJsZipUtils = ($q, $http) => {
       return {
