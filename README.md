@@ -7,6 +7,37 @@ Basically use angularjs built-in provider function '$q' and '$http' to replace x
 
 ## Getting Started
 
+install
+```bash
+yarn add https://github.com/jubilee2/angular-jszip-utils.git#v0.1.0
+```
+
+use
+```javascript
+import 'angular';
+import 'angular-jszip-utils'
+
+angular.module('app', [
+  'angular-jszip-utils',
+])
+.controller('Controller', ['$q', 'JsZipUtils', function($q, JsZipUtils) {
+  var jsZip_loadAsync = (data) => {
+    // change promise to angular promise
+    return $q(function(resolve, reject) {
+      JSZip.loadAsync(data).then(resolve, reject);
+    })
+  }
+
+JsZipUtils.getBinaryContent(url).then((data)=>{
+    // here we go !
+    jsZip_loadAsync(data).then(function (zip) {
+        return zip.file("content.txt").async("string");
+    }).then(function (text) {
+    console.log(text);
+    });
+  })
+}])
+```
 
 
 ## Contact
@@ -22,3 +53,4 @@ For more information on AngularJS please check out http://angularjs.org/
 [karma]: http://karma-runner.github.io
 [travis]: https://travis-ci.org/
 [http-server]: https://github.com/nodeapps/http-server
+[JSZip]: https://stuk.github.io/jszip/
