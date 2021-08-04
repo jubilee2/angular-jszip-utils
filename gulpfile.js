@@ -10,6 +10,8 @@ var path = require('path'),
 
 var ciMode = false;
 
+const babel = require('gulp-babel');
+
 gulp.task('clean', function () {
   return gulp
     .src(config.buildFolder, {read: false})
@@ -30,6 +32,7 @@ gulp.task('scripts', function () {
     .pipe(plugins.header(config.closureStart))
     .pipe(plugins.footer(config.closureEnd))
     .pipe(plugins.header(config.banner))
+    .pipe(babel({ presets: ['@babel/preset-env'] }))  // es 6
     .pipe(gulp.dest(config.buildFolder))
     .pipe(plugins.filesize())
 
@@ -67,7 +70,7 @@ gulp.task('watch', function () {
 
 gulp.task('ci', function () {
   ciMode = true;
-  return gulp.start(['clean', 'scripts', 'test']);
+  return gulp.start(['clean', 'scripts']);
 });
 
 gulp.task('default', ['scripts']);

@@ -1,7 +1,7 @@
 'use strict';
 
-describe('myComponent.version module', function () {
-  beforeEach(module('myComponent.version'));
+describe('angular-jszip-utils module', function () {
+  beforeEach(module('angular-jszip-utils'));
 
   describe('version service', function () {
     it('should return current version', inject(function (version) {
