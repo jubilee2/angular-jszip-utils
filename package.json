@@ -30,7 +30,6 @@
     "shelljs": "^0.2.6"
   },
   "scripts": {
-    "postinstall": "bower install",
     "test": "./node_modules/gulp/bin/gulp.js ci"
   }
 }
