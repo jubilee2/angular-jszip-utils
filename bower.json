@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "angular": "1.2.x",
-    "angular-mocks": "~1.2.x"
+    "angular": "1.8.x",
+    "angular-mocks": "~1.8.x"
   }
 }
