@@ -1,5 +1,5 @@
 'use strict';
 
 angular
-  .module('myComponent.version', [])
+  .module('angular-jszip-utils', [])
   .value('version', '0.1');

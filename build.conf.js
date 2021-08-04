@@ -3,10 +3,10 @@
  */
 module.exports = {
 
-  srcJs: ['component/**/*.module.js', 'component/**/*.js', '!component/**/*_test.js'],
-  tests: 'component/**/*_test.js',
+  srcJs: ['src/**/*.module.js', 'src/**/*.js', '!src/**/*_test.js'],
+  tests: 'src/**/*_test.js',
   buildFolder: 'dist',
-  buildJsFilename: 'component.js',
+  buildJsFilename: 'angular-jszip-utils.js',
   banner: '/*!\n' +
     ' * See LICENSE in this repository for license information\n' +
     ' */\n',

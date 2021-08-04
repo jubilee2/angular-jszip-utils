@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('myComponent.version')
+  .module('angular-jszip-utils')
   .directive('appVersion', ['version', function (version) {
     return function (scope, elm) {
       elm.text(version);
