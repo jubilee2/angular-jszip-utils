@@ -4,7 +4,7 @@ angular
   .module('angular-jszip-utils', [])
   .value('version', '0.1')
   .provider('JsZipUtils', function ChartJsProvider () {
-    var jsZipUtils = ($q, $http) => {
+    var ngJsZipUtils = ($q, $http) => {
       return {
         getBinaryContent: (path, options = {}) => {
           return $q(function(resolve, reject) {
@@ -30,8 +30,5 @@ angular
       };
     };
 
-
-    this.$get = ['$q', '$http', function ($q, $http) {
-      return jsZipUtils($q, $http);
-    }];
+    this.$get = ['$q', '$http', ngJsZipUtils];
   });
