@@ -9,13 +9,14 @@ Basically use angularjs built-in provider function '$q' and '$http' to replace x
 
 install
 ```bash
-yarn add https://github.com/jubilee2/angular-jszip-utils.git#v0.1.0
+yarn add https://github.com/jubilee2/angular-jszip-utils.git#v0.1.0 jszip
 ```
 
 use
 ```javascript
 import 'angular';
 import 'angular-jszip-utils'
+var JSZip = require("jszip");
 
 angular.module('app', [
   'angular-jszip-utils',
